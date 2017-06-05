@@ -1,0 +1,12 @@
+.head-line
+  height: 70px
+  line-height: 70px
+  background-image: $main-gradient
+  &__container
+    +container()
+  &-item
+    &__icon
+      &:before
+        background: $accent-gradient
+        -webkit-background-clip: text
+        color: transparent

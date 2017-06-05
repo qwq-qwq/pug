@@ -1,0 +1,94 @@
+.page
+  font-family: $main-font
+  font-weight: 500
+  color: $font-color-dark
+  font-size: 18px
+  background-color: #f3f3f3
+  &__wrap
+    min-width: 320px
+    max-witdh: 1920px
+    margin: 0 auto
+
+%btn
+  border: none
+  padding: 0px
+  display: block
+  outline: none
+  cursor: pointer
+  border-radius: 100px
+  font-weight: 900
+  font-size: 18px
+  width: 261px
+  height: 50px
+  line-height: 50px * 0.95
+  text-align: center
+  position: relative
+  transition: all .3s
+  box-sizing: border-box
+
+.btn
+  @extend %btn
+  background: $accent-gradient
+  color: #fff
+  &:after,
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 10%
+    width: 80%
+    height: 100%
+    box-shadow: 0 6px 23px 0 rgba(248, 116, 143, 0.51)
+    z-index: -2
+    transition: all .3s
+  &:after
+    background-image: $accent-gradient
+    width: 100%
+    border-radius: 100px
+    left: 0
+    z-index: -1
+  &:active
+    &:before
+      box-shadow: 0 3px 9px 0 rgba(248, 116, 143, 0.51)
+  &--product
+    width: 100%
+    transition: all 0.3s
+    margin-top: 100px
+.ghost-btn
+  @extend %btn
+  color: $font-color-dark
+  background-color: transparent
+  background-mage-source: linear-gradient(to right, #f7879c, #ff9587)
+  border: 2px solid #f7879c
+  &:after,
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 10%
+    width: 80%
+    height: 100%
+    box-shadow: 0 6px 23px 0 rgba(248, 116, 143, 0.51)
+    z-index: -2
+    opacity: 0
+    transition: all .6s
+  &:after
+    background-image: $accent-gradient
+    width: 100%
+    border-radius: 100px
+    left: 0
+    z-index: -1
+  &:hover
+    color: white
+    &:after,
+    &:before
+      opacity: 1
+    &:before
+      transition: all .6s
+  &:active
+    &:before
+      box-shadow: 0 3px 9px 0 rgba(248, 116, 143, 0.51)
+  &--header
+    height: 40px
+    width: 200px
+    line-height: 40px * 0.95

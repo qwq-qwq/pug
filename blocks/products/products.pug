@@ -1,0 +1,15 @@
+mixin products()
+    +b.DIV.products
+        +e.DIV.item
+            +b.DIV.product
+                +e.DIV.wrap
+                    +e.IMG.img(src="img/icons/prod1.svg")
+                    +e.H3.title Визитки
+                    +b.UL.product-price
+                        +e.LI.item
+                            +e.SPAN.cost 255 грн &minus;
+                            | 1000 шт.
+                        +e.LI.item
+                            +e.SPAN.cost 255 грн &minus;
+                            | 1000 шт.
+                    +b.A.btn(href="#" class="--product") Пордробности

@@ -1,0 +1,13 @@
+mixin header(items)
+    +b.HEADER.header
+        +e.DIV.container
+            +e.DIV.logo
+                +b.A.logo
+                    +e.IMG.img(src="img/logo/logo.svg")
+            +e.DIV.menu
+                +b.NAV.header-menu
+                    each item in items
+                        +e.DIV.item
+                            +e.A.link(href=item.href)= item.text
+            +e.DIV.btn
+                +b.BUTTON.ghost-btn(class="--header") Заказать просчет

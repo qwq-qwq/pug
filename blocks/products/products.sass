@@ -1,0 +1,44 @@
+.products
+  display: flex
+  justify-content: space-between
+  width: 100%
+  &__item
+    +col(3)
+.product
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    box-shadow: 0 6px 23px 0 rgba(248, 116, 143, .51)
+    z-index: -1
+    opacity: 0
+    transition: all .3s
+  &__wrap
+    background-color: white
+    padding: 36px 50px 0 50px
+    height:  260px
+    box-sizing: border-box
+    overflow: hidden
+  &__img
+    transition: 0.4s
+  &__title
+    font-size: 24px
+    font-weight: 900
+    margin: 26px 0 11px
+    transition: all .4s
+  &-price
+    &__item
+      font-height: 1.67
+    &__cost
+      font-weight: 900
+  &:hover
+    &:before
+      opacity: 1
+    .produt__wrap
+      border: 2px solid #fd868c
+    .product__title
+      margin-top: 20px
+      transition: all 0.4s
+    .btn--product
+      margin-top: 18px
